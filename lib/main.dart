@@ -30,9 +30,8 @@ class DicePage extends StatelessWidget {
         ),
         Expanded(
           //flex: 1,
-          child: Image(
-            image: AssetImage('images/dice1.png'),
-          ),
+          child: Image.asset(
+              'images/dice2.png'), //this is another way to create images
         ),
       ],
     );
