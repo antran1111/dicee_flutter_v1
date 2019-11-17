@@ -26,6 +26,9 @@ class DicePage extends StatelessWidget {
             // flex: 2, //#2  = 2x as large as the other expanded widget
             //if you don't set flex, they will take up equal space, default ==1
             child: FlatButton(
+              onPressed: () {
+                print('Left button got pressed.');
+              },
               child: Image(
                 image: AssetImage('images/dice1.png'),
               ),
@@ -34,6 +37,9 @@ class DicePage extends StatelessWidget {
           Expanded(
             //flex: 1,
             child: FlatButton(
+              onPressed: () {
+                print('Right button got pressed!');
+              },
               child: Image.asset('images/dice1.png'),
             ), //this is another way to create images
           ),
