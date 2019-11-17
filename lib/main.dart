@@ -25,8 +25,7 @@ class DicePage extends StatelessWidget {
             //expanded widget spreads out to the entire screen
             // flex: 2, //#2  = 2x as large as the other expanded widget
             //if you don't set flex, they will take up equal space, default ==1
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
+            child: FlatButton(
               child: Image(
                 image: AssetImage('images/dice1.png'),
               ),
@@ -34,8 +33,7 @@ class DicePage extends StatelessWidget {
           ),
           Expanded(
             //flex: 1,
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
+            child: FlatButton(
               child: Image.asset('images/dice1.png'),
             ), //this is another way to create images
           ),
