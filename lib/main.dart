@@ -18,6 +18,7 @@ void main() {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var leftDiceNumber = 6;
     return Center(
       child: Row(
         children: <Widget>[
@@ -27,10 +28,10 @@ class DicePage extends StatelessWidget {
             //if you don't set flex, they will take up equal space, default ==1
             child: FlatButton(
               onPressed: () {
-                print('Left button got pressed.');
+                print('diceNumber = $leftDiceNumber');
               },
               child: Image(
-                image: AssetImage('images/dice1.png'),
+                image: AssetImage('images/dice$leftDiceNumber.png'),
               ),
             ),
           ),
