@@ -62,6 +62,15 @@ class DicePage extends StatefulWidget {
 class _DicePageState extends State<DicePage> {
   var leftDiceNumber = 4;
   var rightDiceNumber = 3;
+//looks like you can declare void functions inside another class
+  void generateRandom() {
+    setState(() {
+      leftDiceNumber = Random().nextInt(6) + 1;
+      rightDiceNumber = Random().nextInt(6) + 1;
+      // print('Right button got pressed! ' + diceNumber.toString());
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -74,11 +83,14 @@ class _DicePageState extends State<DicePage> {
             child: FlatButton(
               onPressed: () {
                 //change dicenumber
-                setState(() {
+                generateRandom();
+                /*setState(() {
                   //setstate will rebuild everything
-                  leftDiceNumber = Random().nextInt(6) + 1;
+                  /*leftDiceNumber = Random().nextInt(6) + 1;
                   print('diceNumber = $leftDiceNumber');
-                });
+                  */
+
+                }); */
               },
               child: Image(
                 image: AssetImage('images/dice$leftDiceNumber.png'),
@@ -89,11 +101,13 @@ class _DicePageState extends State<DicePage> {
             //flex: 1,
             child: FlatButton(
               onPressed: () {
-                setState(() {
-                  rightDiceNumber = Random().nextInt(6) + 1;
+                /*etState(() {
+                  /*  rightDiceNumber = Random().nextInt(6) + 1;
                   print('Right button got pressed! ' +
-                      rightDiceNumber.toString());
+                      rightDiceNumber.toString()); */
+                  generateRandom();
                 });
+*/
               },
               child: Image.asset('images/dice$rightDiceNumber.png'),
             ), //this is another way to create images
